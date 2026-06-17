@@ -8,12 +8,14 @@ body {
   background-color: #eef1f3;
   color: #1f2937;
   line-height: 1.7;
+  transition: 0.3s ease;
 }
 
 .page {
   width: 100%;
 }
 
+/* HERO */
 .hero {
   text-align: center;
   padding: 90px 20px 50px;
@@ -26,23 +28,29 @@ body {
   margin: 0;
   font-size: 64px;
   color: #0b3d79;
-  font-weight: 700;
 }
 
 .subtitle {
-  margin-top: 22px;
   font-size: 24px;
   color: #5b6470;
-  font-weight: 600;
 }
 
 .intro {
-  max-width: 900px;
-  margin: 24px auto 0;
   font-size: 20px;
   color: #374151;
 }
 
+/* BUTTON */
+#themeBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* CONTENT */
 .container {
   width: 86%;
   max-width: 1200px;
@@ -52,140 +60,61 @@ body {
 .content-box {
   background-color: #ffffff;
   border-radius: 22px;
-  padding: 40px 42px;
+  padding: 40px;
   margin-bottom: 36px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .section-title {
   font-size: 28px;
   color: #0b3d79;
-  margin: 0 0 28px;
-  padding-left: 18px;
   border-left: 8px solid #0b3d79;
+  padding-left: 18px;
 }
 
-.info-list p {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.lecture-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 18px;
-}
-
+/* CARDS */
 .lecture-card {
   background-color: #f8fafc;
-  border-top: 6px solid #1565c0;
+  padding: 20px;
   border-radius: 14px;
-  padding: 22px;
-}
-
-.lecture-card h3 {
-  margin-top: 0;
-  margin-bottom: 14px;
-  font-size: 20px;
-  color: #0b3d79;
-}
-
-.lecture-card p {
-  margin: 0;
-  font-size: 17px;
 }
 
 .project-card {
   background-color: #f9fafb;
-  border: 1px solid #d9dee5;
-  border-radius: 16px;
   padding: 28px;
+  border-radius: 16px;
+  border: 1px solid #d9dee5;
 }
 
-.project-card h3 {
-  margin-top: 0;
-  margin-bottom: 14px;
-  font-size: 32px;
-  color: #0b3d79;
+/* DARK MODE */
+body.dark-mode {
+  background-color: #0b1220;
+  color: #e5e7eb;
 }
 
-.project-desc {
-  font-size: 19px;
-  margin-bottom: 22px;
+body.dark-mode .content-box {
+  background-color: #111827;
 }
 
-.tag-list {
-  margin-bottom: 24px;
+body.dark-mode .hero h1 {
+  color: #60a5fa;
 }
 
-.tag-list span {
-  display: inline-block;
-  background-color: #e6efff;
-  color: #0b3d79;
-  padding: 8px 14px;
-  margin-right: 8px;
-  margin-bottom: 10px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 15px;
+body.dark-mode .subtitle,
+body.dark-mode .intro {
+  color: #cbd5e1;
 }
 
-.project-image-box {
-  margin: 28px 0;
-  text-align: center;
+body.dark-mode .section-title {
+  color: #60a5fa;
+  border-left-color: #2563eb;
 }
 
-.project-image {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 14px;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+body.dark-mode .lecture-card {
+  background-color: #1f2937;
 }
 
-.project-detail h4 {
-  font-size: 20px;
-  color: #0b3d79;
-  margin-bottom: 8px;
-  margin-top: 24px;
-}
-
-.project-detail p,
-.project-detail li {
-  font-size: 17px;
-}
-
-.project-detail ul {
-  margin-top: 8px;
-  padding-left: 22px;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 60px 20px 40px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
-  .intro {
-    font-size: 17px;
-  }
-
-  .content-box {
-    padding: 28px 22px;
-  }
-
-  .lecture-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card h3 {
-    font-size: 26px;
-  }
+body.dark-mode .project-card {
+  background-color: #111827;
+  border-color: #374151;
 }
